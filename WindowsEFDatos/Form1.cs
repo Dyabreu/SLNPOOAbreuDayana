@@ -31,10 +31,10 @@ namespace WindowsEFDatos
 
             };
 
-            int filasAfectadas = AdmAvion.Insert(avion);
+            int filasAfectadas = AdmAvion.Insertar(avion);
             if (filasAfectadas>0)
             {
-                MessageBox.Show("Avión insertado");
+                MessageBox.Show("Avión insertado.");
                 MostrarAviones();
             }
         }
@@ -47,6 +47,57 @@ namespace WindowsEFDatos
         private void frmAvion_Load(object sender, EventArgs e)
         {
             MostrarAviones();
+        }
+
+        private void btnEditar_Click(object sender, EventArgs e)
+        {
+            LineaAerea lineaAerea = new LineaAerea();
+            { lineaAerea.IdLinea = 1; lineaAerea.Nombre = "Aereolineas Argentinas"; lineaAerea.FechaInicioActividades = DateTime.Now; }
+            Avion avion = new Avion()
+            {
+                IdAvion = Convert.ToInt32(txtId.Text),
+                Capacidad = Convert.ToInt32(txtCapacidad.Text),
+                Denominacion = txtDenominacion.Text,
+                LineaAerea = lineaAerea
+
+            };
+
+            int filasAfectadas = AdmAvion.Editar(avion);
+            if (filasAfectadas> 0)
+            {
+                MessageBox.Show("Avión editado.");
+                MostrarAviones();
+            }
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            LineaAerea lineaAerea = new LineaAerea();
+            { lineaAerea.IdLinea = 1; lineaAerea.Nombre = "Aereolineas Argentinas"; lineaAerea.FechaInicioActividades = DateTime.Now; }
+            Avion avion = new Avion()
+            {
+                IdAvion = Convert.ToInt32(txtId.Text),
+                Capacidad = Convert.ToInt32(txtCapacidad.Text),
+                Denominacion = txtDenominacion.Text,
+                LineaAerea = lineaAerea
+
+            };
+
+            int filasAfectadas = AdmAvion.Eliminar(avion.IdAvion);
+            if (filasAfectadas > 0) 
+            {
+                MessageBox.Show("Avión eliminado.");
+                MostrarAviones();
+            }
+
+        }
+
+        private void btnTraerUno_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(txtId.Text);
+
+            Avion avion = AdmAvion.TraerUno(id);
+            MessageBox.Show("El avión es " + avion.Denominacion + ". Tiene " + avion.Capacidad + " pasajeros.");
         }
     }
 }
