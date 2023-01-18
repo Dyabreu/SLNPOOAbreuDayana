@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="LibTransportes.BASE.Vehiculo">
+    <Position X="0.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAAAAEgAAAAAAAgAAAAAAAE=</HashCode>
+      <FileName>BASE\Vehiculo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibTransportes.AutoElectrico">
+    <Position X="3.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAAAAAAAAAAgABAAAQAAAAAAAAAE=</HashCode>
+      <FileName>AutoElectrico.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LibTransportes.Camion">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAQAAAAAAQAAAAAAAAAgABAAAAAAAAAAAAAM=</HashCode>
+      <FileName>Camion.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Remolque" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="LibTransportes.Remolque">
+    <Position X="9.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Remolque.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
