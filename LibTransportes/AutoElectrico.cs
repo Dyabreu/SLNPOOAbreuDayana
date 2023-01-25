@@ -21,11 +21,11 @@ namespace LibTransportes
 
         public override string Acelera()
         {
-            return base.Acelera() + "Auto eléctrico acelerado.";
+            return "Auto eléctrico acelerado.";
         }
         public override string Frena()
         {
-            return base.Frena() + " Auto eléctrico detenido.";
+            return "Auto eléctrico detenido.";
         }
         public override string Imprimir()
         {

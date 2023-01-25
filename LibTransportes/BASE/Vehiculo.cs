@@ -18,16 +18,12 @@ namespace LibTransportes.BASE
         
         public string Nombre { get; set; }
         public string Modelo { get; set; }
-        public string Placa { get; set; }   
+        public string Placa { get; set; }
 
-        public virtual string Acelera() 
-            {
-            return Nombre + " acelera...";
-            }
-        public virtual string Frena()
-            {
-            return Nombre + " frenó.";
-            }
+        public abstract string Acelera();
+
+        public abstract string Frena();
+       
         public virtual string Imprimir()
         {
             return "Camión.\nNombre: " + Nombre + ".\nModelo: " + Modelo + ".\nPlaca: " + Placa;

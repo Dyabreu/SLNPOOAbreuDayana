@@ -22,7 +22,8 @@ namespace WindowsEFDatos
         private void btnInsertar_Click(object sender, EventArgs e)
         {
             LineaAerea lineaAerea= new LineaAerea();
-            { lineaAerea.IdLinea = 1; lineaAerea.Nombre = "Aereolineas Argentinas";  lineaAerea.FechaInicioActividades = DateTime.Now; }
+            { lineaAerea.Nombre = "Aereolineas Argentinas";  lineaAerea.FechaInicioActividades = DateTime.Now; }
+            List<LineaAerea> lineaAereas= new List<LineaAerea>();
             Avion avion = new Avion()
             {
                 Capacidad = Convert.ToInt32(txtCapacidad.Text),
@@ -52,7 +53,7 @@ namespace WindowsEFDatos
         private void btnEditar_Click(object sender, EventArgs e)
         {
             LineaAerea lineaAerea = new LineaAerea();
-            { lineaAerea.IdLinea = 1; lineaAerea.Nombre = "Aereolineas Argentinas"; lineaAerea.FechaInicioActividades = DateTime.Now; }
+            { lineaAerea.Nombre = "Aereolineas Argentinas"; lineaAerea.FechaInicioActividades = DateTime.Now; }
             Avion avion = new Avion()
             {
                 IdAvion = Convert.ToInt32(txtId.Text),
@@ -73,7 +74,7 @@ namespace WindowsEFDatos
         private void btnEliminar_Click(object sender, EventArgs e)
         {
             LineaAerea lineaAerea = new LineaAerea();
-            { lineaAerea.IdLinea = 1; lineaAerea.Nombre = "Aereolineas Argentinas"; lineaAerea.FechaInicioActividades = DateTime.Now; }
+            { lineaAerea.Nombre = "Aereolineas Argentinas"; lineaAerea.FechaInicioActividades = DateTime.Now; }
             Avion avion = new Avion()
             {
                 IdAvion = Convert.ToInt32(txtId.Text),

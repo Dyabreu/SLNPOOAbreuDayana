@@ -27,11 +27,11 @@ namespace LibTransportes
             }
         public override string Acelera()
         {
-            return base.Acelera() + "Camión acelerado.";
+            return "Camión acelerado.";
         }
         public override string Frena()
         {
-            return base.Frena() + " Camión detenido.";
+            return "Camión detenido.";
         }
 
         public override string Imprimir()
